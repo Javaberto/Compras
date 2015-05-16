@@ -1,0 +1,21 @@
+/*Código que permite conocer el precio final de un producto tras saber el tanto por ciento de beneficios, descuentos e impuestos aplicados a su precio de fábrica. Por Alberto Alsina 2015*/
+
+//CÓDIGO LIBRE
+
+package precios;
+
+public class Main {
+
+	public static void main(String[] args) {
+double fabric = 80; //Precio de fábrica
+double benefits = 50; //Porcentaje de beneficios
+double IVA = 21; //Porcentaje de IVA
+double desc = 0; //Porcentaje de descuento
+double finalp = 0; //Precio final
+
+finalp=(fabric + (((benefits)*0.01)*fabric) + (((IVA)*0.01)*fabric) - (((desc)*0.01)*fabric));
+
+System.out.println("Precio final: "+ finalp+ "€");
+	}
+
+}
